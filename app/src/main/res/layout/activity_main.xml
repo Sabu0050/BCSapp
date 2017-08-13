@@ -12,7 +12,7 @@
         android:layout_height="50sp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="175sp"
+        android:layout_marginBottom="200sp"
         android:background="@drawable/subbutton"
         android:text="" />
 </RelativeLayout>
