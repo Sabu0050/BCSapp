@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+
     Button subButton;
     private AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
