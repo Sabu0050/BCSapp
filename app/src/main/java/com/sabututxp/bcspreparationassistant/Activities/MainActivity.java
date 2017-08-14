@@ -1,4 +1,4 @@
-package com.sabututxp.bcspreparationassistant;
+package com.sabututxp.bcspreparationassistant.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
+
+import com.sabututxp.bcspreparationassistant.R;
 
 public class MainActivity extends AppCompatActivity {
 
