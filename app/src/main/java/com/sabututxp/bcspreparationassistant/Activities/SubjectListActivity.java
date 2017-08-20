@@ -30,6 +30,7 @@ public class SubjectListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 view.setAnimation(buttonClick);
+                
             }
         });
 
