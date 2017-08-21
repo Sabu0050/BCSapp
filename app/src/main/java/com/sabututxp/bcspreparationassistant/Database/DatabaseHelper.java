@@ -1,8 +1,14 @@
 package com.sabututxp.bcspreparationassistant.Database;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.sabututxp.bcspreparationassistant.Model.SubjectsCatagory;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by s on 8/20/17.
@@ -41,6 +47,22 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         if (mDatabase != null) {
             mDatabase.close();
         }
+    }
+
+    public List<SubjectsCatagory> getAllCategoryList(){
+        SubjectsCatagory subjectsCatagory = null;
+        List<SubjectsCatagory> subjectsCatagoryList = new ArrayList<>();
+        openDatabase();
+        Cursor cursor = mDatabase.rawQuery("SELECT * FROM subjects",null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()){
+            subjectsCatagory = new SubjectsCatagory(cursor.getInt(0),cursor.getString(1));
+            subjectsCatagoryList.add(subjectsCatagory);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        closeDatabase();
+        return subjectsCatagoryList;
     }
 
 }
